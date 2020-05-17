@@ -11,7 +11,7 @@ os.system('dnf clean all')
 
 #install preferred packages
 print('\n*****Getting preferred packages...*****\n\n')
-os.system('dnf install openssh-server vim nano wget curl net-tools')
+os.system('dnf install openssh-server vim nano wget net-tools')
 
 #start SSH
 print('\n*****Starting SSH...*****\n\n')
