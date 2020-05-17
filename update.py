@@ -12,15 +12,14 @@ os.system('dnf clean all')
 #install preferred packages
 print('\n*****Getting preferred packages...*****\n\n')
 os.system('dnf install openssh-server vim nano wget curl net-tools')
-os.system('y')
 
 #start SSH
-print('*****Starting SSH...*****')
-os.system('systemctl start ssh')
-os.system('systemctl restart ssh')
+print('\n*****Starting SSH...*****\n\n')
+os.system('systemctl start sshd')
+os.system('systemctl restart sshd')
 
 #create new sudo user
-print('*****Creating sudo user...*****')
+print('\n*****Creating sudo user...*****\n\n')
 username = input('Enter username for sudo user: ')
 os.system(f'adduser {username}')
 os.system(f'passwd {username}')
