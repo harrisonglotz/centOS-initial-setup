@@ -18,6 +18,11 @@ print('\n*****Starting SSH...*****\n\n')
 os.system('systemctl start sshd')
 os.system('systemctl restart sshd')
 
+#change timezone to Standard Est. Time
+print('\n=====Setting Timezone=====\n\n')
+os.system('timedatectl set-timezone America/New_York')
+os.system('timedatectl status')
+
 #create new sudo user
 print('\n*****Creating sudo user...*****\n\n')
 username = input('Enter username for sudo user: ')
